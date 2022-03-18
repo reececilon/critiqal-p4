@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+            {% for review in review_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            {% if 'placeholder' in review.featured_image.url %}
+                            <img class="card-img-top" src="{% static 'media/film.jpeg' %}">
+                            {% else %}
+                            <img class="card-img-top" src="{{ review.featured_image.url }}">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="authhor">Author: {{ review.author }}</p>
+                            </div>
+                        </div>
+                        <a href="#" class="post-link">
+                            <h2 class="card-title">{{ review.title }}</h2>
+                            <p class="card-text">{{ review.excerpt }}</p>
+                        </a>
+                    </div>
+                </div>
+            {% if forloop.counter|divisible:4 %}
+            </div>
+            <div class="row">
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}
