@@ -4,6 +4,6 @@ from .models import Review
 
 class ReviewList(generic.ListView):
     model = Review
-    queryset = Review.objects.filter(status=1).order_by('-created_on')
+    queryset = Review.objects.filter(status=1).order_by('-created_date')
     template_name = 'index.html'
     paginate_by = 8

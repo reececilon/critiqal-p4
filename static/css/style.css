@@ -1,0 +1,81 @@
+body {
+    background-color: #F9FAFC;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*font-sizes*/
+
+.med {
+    font-size: 1.5rem;
+}
+
+/*font colours*/
+.light-black{
+    color: #2C3033
+}
+
+.light-grey{
+    color: #ABAFB1;
+}
+
+.light-blue{
+    color: #C1EBFC;
+}
+
+.mid-grey{
+    color: #666A6C;
+}
+
+.white-txt{
+    color: #ffffff;
+}
+
+/*Background colours*/
+.bg-light-grey{
+    background-color: #ABAFB1;
+}
+
+.bg-black-transparent{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation and logo */
+.logo{
+    font-family: 'League Gothic', sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: #C1EBFC;
+}
+
+/*Movie reviews section*/
+.review-container{
+    width: 100%;
+    height: 32vw;
+    position: relative;
+}
+
+.img-placement{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info-placement{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+}
+
+.crd{
+    border-radius: 25px;
+}
+
+.review-img{
+   width: 100%;
+   height: 100%;
+}
