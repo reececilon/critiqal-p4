@@ -48,6 +48,40 @@ body {
     color: #C1EBFC;
 }
 
+/* Main image */
+
+.container-fluid{
+    margin: 20px 0;
+}
+
+.main-section{
+    background-image: linear-gradient(to bottom right, #2C3033, #C1EBFC);
+    height: 400px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.main-img{
+    border: #000000 1px solid;
+    border-radius: 25px;
+    height: 100%;
+    width: 25rem;
+    float: left;
+}
+
+.main-img-txt{
+    border: #000000 1px solid;
+    border-radius: 25px;
+    height: 100%;
+    width: 25rem;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: 'League Gothic', sans-serif;
+}
+
 /*Movie reviews section*/
 .review-container{
     width: 100%;
@@ -125,22 +159,20 @@ body {
 }
 
 /* video section */
-
 .trailer-container{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 40%;
-    margin-bottom: 20px;
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vid-box{
+    width: 70%;
+    height: 90%;
 }
 
 .video{
     border-radius: 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     width: 100%;
     height: 100%;
 }

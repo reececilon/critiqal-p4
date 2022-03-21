@@ -36,10 +36,11 @@
     <p class="rev-text">{{ review.content | safe }}</p>
 </div>
 <div class="trailer-container">
+    <div class="vid-box">
     <iframe class="video" src="https://www.youtube.com/embed/{{ review.get_iframe }}" 
     title="YouTube video player" frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+    </div>
 </div>
 <div class="comments-section">
     <div class="comment-path">
@@ -57,7 +58,7 @@
         {% endfor %}
     </div>
     <div class="comment-box">
-        
+            <!-- Add comment box here -->
     </div>
 </div>
 {% endblock content %}
