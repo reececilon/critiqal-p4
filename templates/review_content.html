@@ -1,10 +1,87 @@
 {% extends 'base.html' %} {% block content %}
 <div class="content-box">
-    {% if "placeholder" in review.featured_image.url %}
+    <div class="img-crd">
+        {% if "placeholder" in review.featured_image.url %}
         <img class="rev-img" src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" width="100%">
-    {% else %}
+        {% else %}
         <img class="rev-img" src="{{ review.featured_image.url }}" width="100%">
-    {% endif %}
+        {% endif %}
+        <div class="crd-info">
+            <p class="author mid-grey"> {{ review.author }}| {{ review.created_date }} </p>
+            {% if review.rating == 1 %}
+            <p class="light-blue star"><i class="fa-solid fa-star"></i></p>
+            {% elif review.rating == 2 %}
+            <p class="light-blue star"><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i></p>
+            {% elif review.rating == 3 %}
+            <p class="light-blue star"><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i></p>
+            {% elif review.rating == 4 %}
+            <p class="light-blue star"><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i></p>
+            {% else %}
+            <p class="light-blue star"><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i></p>
+            {% endif %}
+            <p class="mid-grey"><i class="far fa-heart"></i> {{ review.no_of_likes }}</p>
+        </div>
+    </div>
+    <h2 class="title-text mid-grey">{{ review.title }}</h2>
     <p class="rev-text">{{ review.content | safe }}</p>
+</div>
+<div class="trailer-container">
+    <iframe class="video" src="https://www.youtube.com/embed/{{ review.get_iframe }}" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<div class="comments-section">
+    <div class="comment-path">
+        <h3>Comments:</h3>
+        {% for comment in comments %}
+            <div class="comments" style="padding: 10px;">
+                <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        {{ comment.created_date }}
+                    </span> wrote:
+                </p>
+                {{ comment.body | linebreaks }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="comment-box">
+
+    </div>
+    </dic>
+    <!-- <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_date }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                coooooooooommmmmmmmeeeeeeeennnnnttttt
+            </div>
+        </div>
+    </div> -->
 </div>
 {% endblock content %}
