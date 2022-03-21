@@ -35,6 +35,10 @@
     <h2 class="title-text mid-grey">{{ review.title }}</h2>
     <p class="rev-text">{{ review.content | safe }}</p>
 </div>
+{% if '' == review.yt_link %}
+<p>There is no trailer available for this video.:(</p>
+{% endif %}
+<!-- Why cant you apply is statement to remove iframe if no yt link provided? -->
 <div class="trailer-container">
     <div class="vid-box">
     <iframe class="video" src="https://www.youtube.com/embed/{{ review.get_iframe }}" 
