@@ -117,6 +117,10 @@ body {
     border-radius: 25px;
 }
 
+.crd-box{
+    padding: 12px;
+}
+
 .content-box{
     padding: 10px;
     border-radius: 25px;
