@@ -212,8 +212,6 @@ body {
 }
 
 /* styling comments */
-
-
 .comments-section{
     min-height: 10rem;
     margin: 10px;
@@ -233,5 +231,49 @@ body {
 .comment{
     margin-bottom: 10px;
     border-bottom: #ABAFB1 1px solid;
+}
+
+/* Login authentication */
+
+.user{
+    display: flex;
+    justify-content: center;
+}
+
+.login-crd{
+    background-color: #C1EBFC;
+    margin: 30px;
+    height: 500px;
+    max-width: 350px;
+    border-radius: 25px;
+}
+
+.login-crd > h2, .login-crd > p{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.login-crd > p > a{
+    color: #ABAFB1;
+    text-decoration: none;
+}
+
+.signin-inputs{
+    margin: 0 15px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.btn-signin{
+    background-color: #666A6C;
+    color: #C1EBFC;
+    border-radius: 25px;
+}
+
+.btn-signin:hover{
+    background-color: #C1EBFC;
+    color:#666A6C;
+    border: #666A6C 1px solid;
 }
 
