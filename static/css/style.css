@@ -3,7 +3,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/*font-sizes*/
+/*fonts*/
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.l-gothic{
+    font-family: 'League Gothic', sans-serif;
+}
 
 .med {
     font-size: 1.5rem;
@@ -44,7 +52,7 @@ body {
     font-family: 'League Gothic', sans-serif;
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link:hover {
     color: #C1EBFC;
 }
 
@@ -243,19 +251,17 @@ body {
 .login-crd{
     background-color: #C1EBFC;
     margin: 30px;
-    height: 500px;
     max-width: 350px;
     border-radius: 25px;
 }
 
 .login-crd > h2, .login-crd > p{
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin: 30px 10px 20px 10px;
 }
 
 .login-crd > p > a{
-    color: #ABAFB1;
+    color: #666A6C;
     text-decoration: none;
 }
 
@@ -269,6 +275,7 @@ body {
     background-color: #666A6C;
     color: #C1EBFC;
     border-radius: 25px;
+    margin: 10px;
 }
 
 .btn-signin:hover{
@@ -277,3 +284,17 @@ body {
     border: #666A6C 1px solid;
 }
 
+/* logout styling */
+
+.logout-crd{
+    background-color: #C1EBFC;
+    margin: 30px;
+    height: 300px;
+    width: 350px;
+    border-radius: 25px;
+}
+
+.logout-crd > h2, .logout-crd > p{
+    text-align: center;
+    margin: 30px 10px 20px 10px;
+}

@@ -12,7 +12,9 @@
     <div class="col user">
       <div class="login-crd">
         <h2>{% trans "Sign In" %}</h2>
-        <p>{% blocktrans %}If you have not created an account yet, then please
+        <p>{% blocktrans %}Welcome back to <span class="mid-grey l-gothic">CRITI</span>
+          <i class="fa-brands fa-quinscape text-secondary"></i>
+          <span class="mid-grey l-gothic">AL</span>. If you have not created an account yet, then please
           <a href="{{ signup_url }}">sign up</a> first to engage in community discussion!{% endblocktrans %}</p>
         <div class="signin-inputs">
           <form class="login" method="POST" action="{% url 'account_login' %}">
