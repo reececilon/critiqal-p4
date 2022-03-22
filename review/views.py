@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Review
+from .forms import CommentForm
 
 class ReviewList(generic.ListView):
     model = Review
@@ -26,6 +27,7 @@ class ReviewInfo(View):
                 'review': review,
                 'comments': comments,
                 'liked': liked,
+                'comment_form': CommentForm(),
             },
         )
 
