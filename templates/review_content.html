@@ -30,7 +30,25 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i></p>
             {% endif %}
-            <p class="mid-grey"><i class="far fa-heart"></i> {{ review.no_of_likes }}</p>
+            {% if user.is_authenticated %}
+            <p class="mid-grey">
+                <form class="d-inline" action="{% url 'review_like' review.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="review_id" value="{{ review.slug }}" class="btn-like mid-grey">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    {% else %}
+                    <button type="submit" name="review_id" value="{{ review.slug }}" class="btn-like mid-grey">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <i class="far fa-heart mid-grey"></i>
+                {% endif %}
+                {{ review.no_of_likes }}
+            </p>
         </div>
     </div>
     <h2 class="title-text mid-grey">{{ review.title }}</h2>
