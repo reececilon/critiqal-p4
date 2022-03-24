@@ -2,11 +2,13 @@
 {% load crispy_forms_tags %}
 <div class="content-box">
     <div class="img-crd">
-        {% if "placeholder" in review.featured_image.url %}
-        <img class="rev-img" src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" width="100%">
-        {% else %}
-        <img class="rev-img" src="{{ review.featured_image.url }}" width="100%">
-        {% endif %}
+        <div class="rev-img" >
+            {% if "placeholder" in review.featured_image.url %}
+            <img src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" width="100%">
+            {% else %}
+            <img src="{{ review.featured_image.url }}" width="100%">
+            {% endif %}
+        </div>
         <div class="crd-info">
             <p class="author mid-grey"> {{ review.author }}| {{ review.created_date }} </p>
             {% if review.rating == 1 %}
@@ -51,8 +53,10 @@
             </p>
         </div>
     </div>
-    <h2 class="title-text mid-grey">{{ review.title }}</h2>
-    <p class="rev-text">{{ review.content | safe }}</p>
+    <div class="review-txt">
+        <h2 class="title-text mid-grey">{{ review.title }}</h2>
+        <p class="rev-text">{{ review.content | safe }}</p>
+    </div>
 </div>
 {% if '' == review.yt_link %}
 <p>There is no trailer available for this video.:(</p>
