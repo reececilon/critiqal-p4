@@ -126,7 +126,7 @@ body {
 .review-header{
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: #363C3E;
+    color: #6c757d;
     margin:30px 0 0 0;
 }
 
@@ -365,5 +365,25 @@ body {
 
     .rev-img > img{
         border-radius: 0 0 0 0;
+    }
+
+    .review-txt{
+        padding: 10px;
+    }
+
+    .vid-box {
+        width: 90%;
+        height: 100%;
+    }
+
+    
+    .comment-path {
+        border-radius: 25px;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .crd-info {
+        border-bottom: 3px solid #666A6C;
     }
 }
