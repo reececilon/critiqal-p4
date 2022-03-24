@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Review
 from .forms import CommentForm
 
@@ -42,6 +43,7 @@ class ReviewInfo(View):
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+        messages.add_message(request, messages.SUCCESS, 'Your comment has been submitted for approval!')
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
