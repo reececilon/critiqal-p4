@@ -12,9 +12,13 @@
                 <h3>
                     A movie review site like no other!
                 </h3>
+                {% if user.is_authenticated %}
+                <p class="txt-sub">Movie reviews for the latest movies out! Join the discussion in the comments for each review. Let everyone know what you thought if you watched the movie and if you agree with the review.</p>
+                {% else %}
                 <p class="txt-sub">
                     Register <a href="{% url 'account_signup' %}">here</a> to get the latest movie reviews and share your thoughts in the comments!
                 </p>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -61,8 +65,8 @@
                                 {% endif %}
                                 <hr/>
                                 <p>{{ review.created_date }} 
-                                    <i class="far fa-heart"></i>{{ review.no_of_likes }}
-                                </p>
+                                    <i class="far fa-heart"></i>{{ review.no_of_likes }} 
+                                    <i class="far fa-comments"></i>{{ comments.no_of_comments }}</strong></p>
                             </div>
                         </div>
                     </a>
