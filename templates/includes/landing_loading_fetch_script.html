@@ -1,19 +1,16 @@
-
-console.log('Hello World!')
-
+<script type="text/javascript">
 const spinner = document.getElementById('spinner');
 const list = document.getElementById('list');
-console.log(spinner.classList)
 
 $.ajax({
     type: 'GET',
     url: '/',
     success: function(res){
         setTimeout(()=>{
-            // spinner.classList.add('invisible')
+            spinner.classList.add('invisible')
             console.log('success')
             list.innerHTML = `
-            <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3 left">
                 <div class="row">
                 {% for review in review_list %}         
                     <div class="col-md-3 col-sm-6 crd-box">
@@ -57,19 +54,19 @@ $.ajax({
                                 {% endif %}
                                 <hr/>
                                 <p class="info">{{ review.created_date }} 
-                                    <i class="far fa-heart"></i>{{ review.no_of_likes }} 
-                                    <i class="far fa-comments"></i>{{ comments.no_of_comments }}</strong>
+                                    <i class="far fa-heart"></i>{{ review.no_of_likes }}
                                 </p>
                         </div>
                     </div>
                     </a>
                 </div>
                 {% endfor %}
-            </div>
-            `
-        },400)
+        </div>
+        `
+        },800)
     },
     error: function(er){
         console.log('error')
     },
 })
+</script>

@@ -59,7 +59,6 @@
     </div>
 </div>
 {% if review.get_iframe %}
-<!-- Why cant you apply is statement to remove iframe if no yt link provided? -->
 <div class="trailer-container">
     <div class="vid-box">
     <iframe class="video" src="https://www.youtube.com/embed/{{ review.get_iframe }}" 
@@ -68,7 +67,9 @@
     </div>
 </div>
 {% else %}
-<p>There is no trailer available for this video.</p>
+<div class="text-center">
+    <p>I am very sorry, but there is no trailer available for this moview review.</p>
+</div>
 {% endif %}
 <div class="comments-section">
         <div class="comment-path col-md-6">
