@@ -30,7 +30,7 @@ class Review(models.Model):
         return self.likes.count()
 
     def get_iframe(self):
-        if self.yt_link and 'youtube' in self.yt_link:
+        if self.yt_link and 'youtube' in self.yt_link and '=' in self.yt_link:
             part_1 = self.yt_link.split('=', 1)[1]
             if '&' in part_1:
                 return part_1.split('&', 1)[0]
