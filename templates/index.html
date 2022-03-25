@@ -43,28 +43,28 @@
                             <div class="info-placement bg-black-transparent white-txt">
                                 <h5 class="card-title">{{ review.title }}</h5>
                                 {% if review.rating == 1 %}
-                                <p class="light-blue"><i class="fa-solid fa-star"></i></p>
+                                <p class="light-blue star"><i class="fa-solid fa-star"></i></p>
                                 {% elif review.rating == 2 %}
-                                <p class="light-blue"><i class="fa-solid fa-star"></i>
+                                <p class="light-blue star"><i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i></p>
                                 {% elif review.rating == 3 %}
-                                <p class="light-blue"><i class="fa-solid fa-star"></i>
+                                <p class="light-blue star"><i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i></p>
                                 {% elif review.rating == 4 %}
-                                <p class="light-blue"><i class="fa-solid fa-star"></i>
+                                <p class="light-blue star"><i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i></p>
                                 {% else %}
-                                <p class="light-blue"><i class="fa-solid fa-star"></i>
+                                <p class="light-blue star"><i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i></p>
                                 {% endif %}
                                 <hr/>
-                                <p>{{ review.created_date }} 
+                                <p class="info">{{ review.created_date }} 
                                     <i class="far fa-heart"></i>{{ review.no_of_likes }} 
                                     <i class="far fa-comments"></i>{{ comments.no_of_comments }}</strong></p>
                             </div>
@@ -79,11 +79,11 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" 
+            <li ><a class="paginate-btn" href="?page={{ page_obj.previous_page_number }}" 
                 class="page-link">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" 
+            <li><a class="paginate-btn" href="?page={{ page_obj.next_page_number }}" 
                 class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>

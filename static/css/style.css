@@ -139,6 +139,7 @@ body {
 .img-placement{
     width: 100%;
     height: 100%;
+    border-radius: 25px;
     position: absolute;
     top: 0;
     left: 0;
@@ -169,6 +170,26 @@ body {
 
 .review-txt{
     min-width: 200px;
+}
+
+.paginate-btn{
+    background-color: #666A6C;
+    color: #C1EBFC;
+    border-radius: 25px;
+    display: block;
+}
+
+.paginate-btn:hover{
+    background-color: #C1EBFC;
+    color:#666A6C;
+    border: #666A6C 1px solid;
+}
+
+.pagination > li{
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
 }
 
 /* review content and image section */
@@ -331,6 +352,53 @@ body {
     margin: 30px 10px 20px 10px;
 }
 
+/* For screen sizes smaller than 767px */
+@media only screen and (max-width: 767px) {
+    .review-container {
+        width: 100%;
+        height: 70vw;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .img-placement {
+        overflow: hidden;
+        height: auto;
+    }
+
+    .review-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* For screen sizes smaller than 575px */
+@media only screen and (max-width: 575px) {
+    .info-placement {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+        text-align: center;
+    }
+
+    .card-title {
+        margin-bottom: 0px;
+        font-size: 5vw;
+    }
+
+    .star{
+        padding: 0.5vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .info-placement > hr{
+        margin: 2vw 0;
+    }
+}
 
 /* Screen sizes smaller than 440px */
 
@@ -386,4 +454,9 @@ body {
     .crd-info {
         border-bottom: 3px solid #666A6C;
     }
+
+    .info{
+        font-size: 4vw;
+    }
+
 }
