@@ -109,8 +109,7 @@
                                     {% endif %}
                                     <hr/>
                                     <p class="info">{{ review.created_date }} 
-                                        <i class="far fa-heart"></i>{{ review.no_of_likes }} 
-                                        <i class="far fa-comments"></i>{{ comments.no_of_comments }}</strong>
+                                        <i class="far fa-heart"></i>{{ review.no_of_likes }}
                                     </p>
                             </div>
                         </div>
@@ -119,7 +118,7 @@
                     {% endfor %}
             </div>
             `
-            },400)
+            },1000)
         },
         error: function(er){
             console.log('error')
