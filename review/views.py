@@ -77,3 +77,7 @@ class ReviewLike(View):
             review.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('review_content', args=[slug]))
+
+
+def NotFound(request, exception):
+    return render(request, 'not-found.html')

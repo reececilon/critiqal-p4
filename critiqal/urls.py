@@ -23,3 +23,5 @@ urlpatterns = [
     path('', include('review.urls'), name='review_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'review.views.NotFound'
