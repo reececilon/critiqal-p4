@@ -81,3 +81,7 @@ class ReviewLike(View):
 
 def NotFound(request, exception):
     return render(request, 'not-found.html')
+
+
+def ErrorFive(request, exception):
+    return render(request, 'error-500.html')

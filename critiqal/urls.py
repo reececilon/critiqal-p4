@@ -25,3 +25,5 @@ urlpatterns = [
 ]
 
 handler404 = 'review.views.NotFound'
+
+handler500 = 'review.views.ErrorFive'

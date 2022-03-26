@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<div class="not-found">
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <p class="logo error-404"><span class="light-blue">CRITI</span>
+        <i class="fa-brands fa-quinscape text-secondary"></i>
+        <span class="light-blue">AL 500 ERROR!</span>
+        </p>
+    </a>
+    <p class="txt-sub">
+        To navigate back to the home page click <a href="{% url 'home' %}">here</a>
+    </p>
+</div>
+{% endblock content %}
