@@ -83,5 +83,5 @@ def NotFound(request, exception):
     return render(request, 'not-found.html')
 
 
-def ErrorFive(request, exception):
+def ErrorFive(request):
     return render(request, 'error-500.html')
