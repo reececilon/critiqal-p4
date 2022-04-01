@@ -17,7 +17,7 @@ class Review(models.Model):
     rating = models.IntegerField(choices=RATING, default=1)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
-    excerpt = models.CharField(max_length=200, blank=True)
+    excerpt = models.CharField(max_length=80, blank=True)
     yt_link = models.TextField(blank=True)
 
     class Meta:

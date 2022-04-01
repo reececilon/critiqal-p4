@@ -4,9 +4,9 @@
     <div class="img-crd">
         <div class="rev-img" >
             {% if "placeholder" in review.featured_image.url %}
-            <img src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" width="100%">
+            <img src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" width="100%" alt="Image of movie" aria-label="image of movie">
             {% else %}
-            <img src="{{ review.featured_image.url }}" width="100%">
+            <img src="{{ review.featured_image.url }}" width="100%" alt="Replacement image" aria-label="Replacement image of review">
             {% endif %}
         </div>
         <div class="crd-info">
