@@ -59,6 +59,8 @@ body {
   
 .row{
     justify-content: center;
+    width: 100%;
+    margin: 0;
 }
 
 #list{
@@ -454,7 +456,7 @@ body {
     margin: 30px 10px 20px 10px;
 }
 
-/* For screen sizes smaller than 767px
+For screen sizes smaller than 767px
 @media only screen and (max-width: 767px) {
     .review-container {
         width: 100%;
@@ -475,7 +477,7 @@ body {
 }
 
 
-For screen sizes smaller than 575px
+/* For screen sizes smaller than 575px */
 @media only screen and (max-width: 575px) {
     .info-placement {
         z-index: 10;
@@ -506,8 +508,7 @@ For screen sizes smaller than 575px
     }
 }
 
- Screen sizes smaller than 440px
-
+ /* Screen sizes smaller than 440px */
 @media only screen and (max-width: 440px) {
     .logo-img {
         width: 90vw;
@@ -565,4 +566,4 @@ For screen sizes smaller than 575px
         font-size: 4vw;
     }
 
-} */
+}
