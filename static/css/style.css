@@ -298,7 +298,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 2em;
+    padding: 1em 2em;
     border-radius: 25px 25px 0 0;    
     background-color: rgb(171, 175, 177);
     transform: translateY(-100%);
@@ -345,7 +345,7 @@ body {
   }
   
   .box__description {
-    padding: 0 2em 2em;
+    padding: 0 2em 1em;
     margin: 0;
     color: #C1EBFC;  
     display: -webkit-box;
@@ -394,7 +394,7 @@ body {
 }
 
 .content-box{
-    padding: 10px;
+    padding: 40px 40px 0 40px;
     border-radius: 25px;
     margin: 15px;
     overflow: auto;
@@ -592,7 +592,7 @@ body {
     margin: 30px 10px 20px 10px;
 }
 
-For screen sizes smaller than 767px
+/* For screen sizes smaller than 767px */
 @media only screen and (max-width: 767px) {
     .review-container {
         width: 100%;
@@ -622,6 +622,19 @@ For screen sizes smaller than 767px
         width: 100%;
         border-radius: 0 0 25px 25px;
         text-align: center;
+    }
+
+    .box__header{
+        padding: 0.8rem;
+    }
+
+    .box__title{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .box__status{
+        font-size: 0.8rem;
     }
 
     .card-title {
