@@ -24,15 +24,67 @@
 
     <h3 class="review-header">Movie Reviews</h3>
     <!-- Spinner -->
-    <div id="spinner">
+    <!-- <div id="spinner">
         <div class="d-flex justify-content-center mt-5 mb-5">
             <div class="spinner-border mid-grey" role="status">
               <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="list"></div>
+    <div id="list">
+        <div class="col-12 mt-4">
+            <div class="reviews">
+            <div class="row">
+            {% for review in review_list %}         
+            <div class="card">
+                {% if "placeholder" in review.featured_image.url %}
+                    <img class="review-img" src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" alt="Replacement image of movie" aria-label="Replacement image for the movie review">
+                {% else %}
+                    <img class="review-img crd" src=" {{ review.featured_image.url }}" alt="Image of movie" aria-label="Image for the movie review">
+                {% endif %}
+            <div class="info">
+            <h5>{{ review.title }}</h5>
+            <p>{{ review.excerpt }}</p>
+            {% if review.rating == 1 %}
+                <p class="light-blue star"><i class="fa-solid fa-star"></i></p>
+            {% elif review.rating == 2 %}
+                <p class="light-blue star"><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            {% elif review.rating == 3 %}
+                <p class="light-blue star"><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            {% elif review.rating == 4 %}
+                <p class="light-blue star"><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            {% else %}
+                <p class="light-blue star"><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            {% endif %}
+            <p class="info">
+                {{ review.created_date }}
+            </p>
+            <p>
+                <i class="far fa-heart"></i>{{ review.no_of_likes }}
+            </p>
+            <a href="{% url 'review_content' review.slug %}"><button>Read Review</button></a>
+            </div>
+            </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -52,5 +104,5 @@
 {% endblock %}
 {% block postload_js %}
 {{ block.super }}
-{% include 'includes/landing_loading_fetch_script.html' %}
+<!-- {% include 'includes/landing_loading_fetch_script.html' %} -->
 {% endblock %}
