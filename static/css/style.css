@@ -202,6 +202,7 @@ body {
 .s-link{
     color: #666A6C;
     font-size: 1.5rem;
+    margin: 0.4rem;
 }
 
 .s-link:hover{
@@ -219,7 +220,7 @@ body {
     height: 400px;
     margin-top: 0;
     overflow: auto; */
-    background-image: linear-gradient(to bottom right, #2C3033, #C1EBFC);
+    background-image: linear-gradient(to right, #2C3033, #C1EBFC);
     height: 25rem;
     margin-top: 0;
     display: flex;
@@ -475,7 +476,9 @@ body {
 }
 
 .pagination{
-    margin-top: 1.5rem;
+    padding: 1.5rem 0;
+    margin: 0;
+    background-color: #DFDFDF;
 }
 
 .pagination > li{
@@ -648,7 +651,7 @@ body {
 /* For screen sizes smaller than 1001px */
 @media only screen and (max-width: 1001px) {
     .main-section{
-        background-image: linear-gradient(to bottom right, #2C3033, #C1EBFC);
+        /* background-image: linear-gradient(to bottom, #2C3033, #C1EBFC); */
         height: 400px;
         margin-top: 0;
         overflow: auto;
