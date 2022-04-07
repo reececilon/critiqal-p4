@@ -2,8 +2,17 @@ html{
     height: 100%;
 }
 
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
 body {
-    background-color: #ffffff;
+    background-color: #DFDFDF;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -153,7 +162,7 @@ body {
   .card .info {
     position: relative;
     z-index: 3;
-    color: white;
+    color: #ffffff;
     opacity: 0;
     transform: translateY(30px);
     transition: 0.5s;
@@ -272,6 +281,11 @@ body {
 
 .txt-box{
     text-align: left;
+    margin-left: 7rem;
+}
+
+.txt-box > h3{
+    font-size: 3rem;
 }
 
 .txt-sub{
@@ -286,21 +300,7 @@ body {
 }
 
 
-/* styling review cards test */
-:root {
-    --surface-color: #fff;
-    --curve: 40;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #fef8f8;
-  }
-  
+/* styling review cards test */  
   .flash {
     /* display: grid; */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -657,6 +657,10 @@ body {
         overflow: auto;
     }
 
+    .txt-box{
+        margin-left: 3rem;
+    }
+
     .main-img{
         border-radius: 25px;
         height: 100%;
@@ -692,6 +696,10 @@ body {
 
     .main-img{
         overflow: unset;
+    }
+
+    .txt-box{
+        margin-left: 0;
     }
 }
 
