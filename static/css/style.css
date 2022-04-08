@@ -112,12 +112,18 @@ body {
 }
 
 .txt-sub{
-    color: #2C3033;
+    color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
 
-.txt-sub > a{
+.txt-sub-error{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.txt-sub-error > a{
     color: #C1EBFC;
     text-decoration: none;
 }
