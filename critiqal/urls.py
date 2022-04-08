@@ -24,7 +24,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 ]
 
-handler404 = 'review.views.NotFound'
+handler404 = 'review.views.not_found'
 
 
-handler500 = 'review.views.ErrorFive'
+handler500 = 'review.views.error_five'

@@ -26,9 +26,7 @@ body {
     font-family: 'League Gothic', sans-serif;
 }
 
-.med {
-    font-size: 1.5rem;
-}
+/* Error page styling */
 
 .not-found{
     text-align: center;
@@ -39,13 +37,6 @@ body {
 }
 
 /*font colours*/
-.light-black{
-    color: #2C3033
-}
-
-.light-grey{
-    color: #ABAFB1;
-}
 
 .light-blue{
     color: #C1EBFC;
@@ -55,27 +46,83 @@ body {
     color: #666A6C;
 }
 
-.white-txt{
-    color: #ffffff;
-}
-
-/*Background colours*/
+/* background colors*/
 .bg-light-grey{
     background-color: #ABAFB1;
 }
 
-.invisible{
-    display: none;
+/* Navigation and logo */
+.logo{
+    font-family: 'League Gothic', sans-serif;
 }
 
-.light-blue-bg{
-    background-color: rgba(193, 236, 252, 0.6);
-    border: 1px solid #363C3E;
-    color:#363C3E;
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #C1EBFC;
+}
+
+/* Main image */
+.container-fluid{
+    margin: 20px 0;
+}
+
+.main-section{
+    background-image: linear-gradient(to right, #2C3033, #C1EBFC);
+    height: 25rem;
+    margin-top: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.logo-img{
+    width: 40rem;
+    border-radius: 25px;
+}
+
+.main-img{
+    height: 25rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.main-img-txt{
+    border-radius: 25px;
+    height: 100%;
+    width: 40rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-family: 'League Gothic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.txt-box{
+    text-align: left;
+    margin-left: 7rem;
+    min-width: 16rem;
+    max-width: 30rem;
+}
+
+.txt-box > h3{
+    font-size: 3rem;
+}
+
+.txt-sub{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.txt-sub > a{
+    color: #C1EBFC;
+    text-decoration: none;
 }
 
 /* styling review cards */
-
 .reg{
     padding: 0.6rem;
     outline: none;
@@ -106,10 +153,6 @@ body {
     margin: 0;
 }
 
-/* #list{
-    padding: 0;
-} */
-
 .card {
     width: 280px;
     height: 360px;
@@ -125,7 +168,6 @@ body {
     border: none;
   }
   .card:hover {
-    /* transform: translateY(20px); */
     transform: scale(1.1);
   }
   .card:hover:before {
@@ -194,15 +236,6 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Navigation and logo */
-.logo{
-    font-family: 'League Gothic', sans-serif;
-}
-
-.navbar-light .navbar-nav .nav-link:hover{
-    color: #C1EBFC;
-}
-
 /* Styling footer social links */
 .socials{
     text-align: center;
@@ -218,91 +251,31 @@ body {
     color: #C1EBFC;
 }
 
-/* Main image */
-
-.container-fluid{
-    margin: 20px 0;
-}
-
-.main-section{
-    /* background-image: linear-gradient(to bottom right, #2C3033, #C1EBFC);
-    height: 400px;
-    margin-top: 0;
-    overflow: auto; */
-    background-image: linear-gradient(to right, #2C3033, #C1EBFC);
-    height: 25rem;
-    margin-top: 0;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-}
-
-.logo-img{
-    /* width: 25rem;
-    height: 100%;
-    border-radius: 25px; */
-    width: 40rem;
-    /* height: 100%; */
-    border-radius: 25px;
-}
-
-.main-img{
-    /* border-radius: 25px;
-    height: 100%;
-    width: 40rem; */
-    height: 25rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
-.main-img-txt{
-    /* border-radius: 25px;
-    height: 100%;
-    width: 40rem;
-    font-size: 2.5rem;
-    color: #363C3E;
-    font-family: 'League Gothic', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-    border-radius: 25px;
-    height: 100%;
-    width: 40rem;
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-family: 'League Gothic', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*Movie reviews section*/
+.review-header{
+    text-align: center;
     font-family: 'Roboto', sans-serif;
+    color: #6c757d;
+    margin:30px 0 0 0;
 }
 
-.txt-box{
-    text-align: left;
-    margin-left: 7rem;
+.review-container{
+    width: 100%;
+    height: 32vw;
+    position: relative;
 }
 
-.txt-box > h3{
-    font-size: 3rem;
+.img-placement{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.txt-sub{
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-}
-
-.txt-sub > a{
-    color: #C1EBFC;
-    text-decoration: none;
-}
-
-
-/* styling review cards test */  
-  .flash {
-    /* display: grid; */
+/* styling review cards*/  
+.flash {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 0;
@@ -359,15 +332,6 @@ body {
     transition: .2s ease-in-out;
   }
   
-  /* .box__arc {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    bottom: 100%;
-    right: 0;      
-    z-index: 1;
-  } */
-  
   .box:hover .box__header {
     transform: translateY(0);
   }
@@ -381,17 +345,8 @@ body {
   
   .box__title {
     font-size: 1.5em;
-    /* margin: 0 0 .3em; */
     color: #363C3E;
   }
-  
-  /* .box__tagline {
-    display: block;
-    margin: 1em 0;
-    font-family: "MockFlowFont";  
-    font-size: .8em; 
-    color: #363C3E;  
-  } */
   
   .box__status {
     font-size: 1em;
@@ -407,45 +362,6 @@ body {
     -webkit-line-clamp: 3;
     overflow: hidden;
   }   
-
-/*Movie reviews section*/
-.review-header{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: #6c757d;
-    margin:30px 0 0 0;
-}
-
-.review-container{
-    width: 100%;
-    height: 32vw;
-    position: relative;
-}
-
-.img-placement{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.info-placement{
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0 0 25px 25px;
-}
-
-.crd{
-    border-radius: 25px;
-}
-
-.crd-box{
-    padding: 12px;
-}
 
 .content-box{
     padding: 40px 40px 0 40px;
@@ -489,41 +405,9 @@ body {
 }
 
 /* review content and image section */
-
-.review-img{
-   width: 100%;
-   height: 100%;
-}
-
 .title-text{
     font-size: 2rem;
     margin: 20px;
-}
-
-/* .img-crd{
-    width: 35%;
-    min-width: 200px;
-    margin: 10px 10px 20px 10px;
-    border-radius: 25px;
-    float: right;
-    clear: both;
-    background-color: #ABAFB1;
-} */
-
-.rev-img{
-    width: 100%;
-    /* height: 90%; */
-    border-radius: 25px;
-    float: right;
-    clear: both;
-}
-
-.rev-img > img{
-    border-radius: 25px 25px 0 0;
-}
-
-.crd-info{
-    text-align: center;
 }
 
 .author{
@@ -584,6 +468,12 @@ body {
     font-size: 1.5rem;
 }
 
+.success{
+    background-color: rgba(193, 236, 252, 0.6);
+    border: 1px solid #C1EBFC;
+    color:#2C3033;
+}
+
 /* Styling like button */
 .btn-like{
     border: none;
@@ -591,7 +481,6 @@ body {
 }
 
 /* Login authentication */
-
 .user{
     display: flex;
     justify-content: center;
@@ -634,7 +523,6 @@ body {
 }
 
 /* logout styling */
-
 .logout-crd{
     background-color: #C1EBFC;
     margin: 30px;
@@ -651,7 +539,6 @@ body {
 /* For screen sizes smaller than 1001px */
 @media only screen and (max-width: 1001px) {
     .main-section{
-        /* background-image: linear-gradient(to bottom, #2C3033, #C1EBFC); */
         height: 400px;
         margin-top: 0;
         overflow: auto;
@@ -689,11 +576,6 @@ body {
         height: auto;
     }
 
-    .review-img {
-        width: 100%;
-        height: 100%;
-    }
-
     .main-img{
         overflow: unset;
     }
@@ -706,14 +588,6 @@ body {
 
 /* For screen sizes smaller than 575px */
 @media only screen and (max-width: 575px) {
-    .info-placement {
-        z-index: 10;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border-radius: 0 0 25px 25px;
-        text-align: center;
-    }
 
     .box__header{
         padding: 0.8rem;
@@ -737,10 +611,6 @@ body {
         padding: 0.5vw;
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    .info-placement > hr{
-        margin: 2vw 0;
     }
     
     .error-404{
@@ -774,14 +644,6 @@ body {
         padding: 10px
     }
 
-    .rev-img{
-        border-radius: 0;
-    }
-
-    .rev-img > img{
-        border-radius: 0 0 0 0;
-    }
-
     .review-txt{
         padding: 10px;
     }
@@ -798,18 +660,10 @@ body {
         max-width: 90%;
     }
 
-    .crd-info {
-        border-bottom: 3px solid #666A6C;
-    }
-
     .info{
         font-size: 4vw;
     }
 
 }
 
-.success{
-    background-color: rgba(193, 236, 252, 0.6);
-    border: 1px solid #C1EBFC;
-    color:#2C3033;
-}
+

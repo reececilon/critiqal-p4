@@ -4,7 +4,8 @@ from cloudinary.models import CloudinaryField
 
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
-RATING = ((1,1),(2,2),(3,3),(4,4),(5,5))
+RATING = ((1, 1), (2, 2), (3, 3), (4, 4), (5, 5))
+
 
 class Review(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='review_posts')
@@ -38,7 +39,7 @@ class Review(models.Model):
                 return part_1
         else:
             return None
-    
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
@@ -53,4 +54,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.body} - {self.name}'
-    

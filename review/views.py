@@ -5,7 +5,10 @@ from django.contrib import messages
 from .models import Review
 from .forms import CommentForm
 
+
 class ReviewList(generic.ListView):
+    """Creates a list of the available
+    reviews that are not drafted and paginates them"""
     model = Review
     queryset = Review.objects.filter(status=1).order_by('-created_date')
     template_name = 'index.html'
@@ -13,8 +16,13 @@ class ReviewList(generic.ListView):
 
 
 class ReviewInfo(View):
+    """Returns the review model information,
+    comments, and likes. Also Checks if the
+    user liked the post."""
 
     def get(self, request, slug, *args, **kwargs):
+        """Checks whether the user liked review,
+        and returns Review model information"""
         queryset = Review.objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
         comments = review.comments.filter(approved=True).order_by('created_date')
@@ -35,6 +43,7 @@ class ReviewInfo(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """Post form for the user to comment on a review"""
         queryset = Review.objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
         comments = review.comments.filter(approved=True).order_by('created_date')
@@ -67,8 +76,11 @@ class ReviewInfo(View):
 
 
 class ReviewLike(View):
+    """Enables the user to like a review"""
 
     def post(self, request, slug):
+        """Enables the user to like or unlike depending
+        on whether the user has previously liked a review"""
         review = get_object_or_404(Review, slug=slug)
 
         if review.likes.filter(id=request.user.id).exists():
@@ -79,9 +91,11 @@ class ReviewLike(View):
         return HttpResponseRedirect(reverse('review_content', args=[slug]))
 
 
-def NotFound(request, exception):
+def not_found(request, exception):
+    """Returns the custom 404 error page (not-found.html)"""
     return render(request, 'not-found.html')
 
 
-def ErrorFive(request):
+def error_five(request):
+    """Returns the custom 500 error page (error-500.html)"""
     return render(request, 'error-500.html')
