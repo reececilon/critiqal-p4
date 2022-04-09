@@ -32,6 +32,14 @@ body {
     text-align: center;
 }
 
+.error-five{
+    color: #3E1403;
+}
+
+.not-found-error{
+    color: #3E1403;
+}
+
 .error-404{
     font-size: 5rem;
 }

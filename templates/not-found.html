@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 <div class="not-found">
     <a class="navbar-brand" href="{% url 'home' %}">
-        <p class="logo error-404"><span class="light-blue">CRITI</span>
+        <p class="logo error-404"><span class="not-found-error">CRITI</span>
         <i class="fa-brands fa-quinscape text-secondary"></i>
-        <span class="light-blue">AL 404 ERROR!</span>
+        <span class="not-found-error">AL 404 ERROR!</span>
         </p>
     </a>
-    <p class="txt-sub">
+    <p class="txt-sub-error">
         To navigate back to the home page click <a href="{% url 'home' %}">here</a>
     </p>
 </div>
