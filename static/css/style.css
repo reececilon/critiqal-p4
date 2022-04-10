@@ -137,8 +137,8 @@ body {
 }
 
 .txt-sub-error > a:hover{
-    transform: scale(1.1);
     color:#C1EBFC;
+    text-decoration: underline;
 }
 
 /* styling review cards */
