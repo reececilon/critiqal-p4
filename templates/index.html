@@ -1,75 +1,72 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-    <div class="main-section row">
-        <div class="col-sm main-img-txt">
-            <div class="txt-box">
-                <h3>
-                    A movie review site like no other!
-                </h3>
-                {% if user.is_authenticated %}
-                <p class="txt-sub">Movie reviews for the latest movies out! Join the discussion in the comments for each review.</p>
-                {% else %}
-                <p class="txt-sub">
-                    Get the latest movie reviews and share your thoughts in the comments!
-                </p>
-                <a href="{% url 'account_signup' %}"><button class="reg">Register</button></a>
-                {% endif %}
-            </div>
-        </div>
-        <div class="main-img col-sm">
-            <img src="{% static 'media/logo-main-image.png' %}" class="logo-img" alt="Logo image" aria-label="Image of crescent encircling a full-moon">
+<!-- Main section -->
+<div class="main-section row">
+    <div class="col-sm main-img-txt">
+        <div class="txt-box">
+            <h3>
+                A movie review site like no other!
+            </h3>
+            {% if user.is_authenticated %}
+            <p class="txt-sub">Movie reviews for the latest movies out! Join the discussion in the comments for each review.</p>
+            {% else %}
+            <p class="txt-sub">
+                Get the latest movie reviews and share your thoughts in the comments!
+            </p>
+            <a href="{% url 'account_signup' %}"><button class="reg">Register</button></a>
+            {% endif %}
         </div>
     </div>
-    <!-- Spinner -->
-    <!-- <div id="spinner">
-        <div class="d-flex justify-content-center mt-5 mb-5">
-            <div class="spinner-border mid-grey" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div id="list"> -->
-        <div class="col-12">
-            <div class="reviews">
-                <h3 class="review-header">Movie Reviews</h3>
-            <div class="row">
-            {% for review in review_list %}         
-            <div class="card">
-                {% if "placeholder" in review.featured_image.url %}
-                    <img class="crd" src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" alt="Replacement image of movie" aria-label="Replacement image for the movie review">
-                {% else %}
-                    <img class="crd" src=" {{ review.featured_image.url }}" alt="Image of movie" aria-label="Image for the movie review">
-                {% endif %}
-            <div class="info">
+    <div class="main-img col-sm">
+        <img src="{% static 'media/logo-main-image.png' %}" class="logo-img" alt="Logo image" aria-label="Image of crescent encircling a full-moon">
+    </div>
+</div>
+<!-- Movie review section -->
+<div class="col-12">
+    <div class="reviews">
+        <h3 class="review-header">Movie Reviews</h3>
+        <div class="row">
+        {% for review in review_list %}         
+        <div class="card">
+            {% if "placeholder" in review.featured_image.url %}
+                <img class="crd" src="https://static.turbosquid.com/Preview/2014/05/19__20_05_03/MovieCamera1SigWBG.jpg60d7c51a-b1b2-4266-93ed-2d47e3bf5a73Large.jpg" alt="Replacement image of movie" aria-label="Replacement image for the movie review">
+            {% else %}
+                <img class="crd" src=" {{ review.featured_image.url }}" alt="Image of movie" aria-label="Image for the movie review">
+            {% endif %}
+        <div class="info">
             <h5>{{ review.title }}</h5>
             <p>{{ review.excerpt }}</p>
             {% if review.rating == 1 %}
-                <p class="light-blue star"><i class="fa-solid fa-star"></i></p>
+            <p class="light-blue star">
+                <i class="fa-solid fa-star"></i>
+            </p>
             {% elif review.rating == 2 %}
-                <p class="light-blue star"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
+            <p class="light-blue star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
             {% elif review.rating == 3 %}
-                <p class="light-blue star"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
+            <p class="light-blue star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
             {% elif review.rating == 4 %}
-                <p class="light-blue star"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
+            <p class="light-blue star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
             {% else %}
-                <p class="light-blue star"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </p>
+            <p class="light-blue star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p>
             {% endif %}
             <p class="info">
                 {{ review.created_date }}
@@ -78,27 +75,28 @@
                 <i class="far fa-heart"></i>{{ review.no_of_likes }}
             </p>
             <a href="{% url 'review_content' review.slug %}"><button>Read Review</button></a>
-            </div>
-            </div>
-            {% endfor %}
-            </div>
-            </div>
         </div>
-    <!-- </div> -->
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li ><a class="paginate-btn" href="?page={{ page_obj.previous_page_number }}" 
-                class="page-link">&laquo; Prev </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a class="paginate-btn" href="?page={{ page_obj.next_page_number }}" 
-                class="page-link"> Next &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+    </div>
 </div>
-
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li >
+            <a class="paginate-btn" href="?page={{ page_obj.previous_page_number }}" 
+            class="page-link">&laquo; Prev </a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li>
+            <a class="paginate-btn" href="?page={{ page_obj.next_page_number }}" 
+            class="page-link"> Next &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}
