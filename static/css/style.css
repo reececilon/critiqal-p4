@@ -132,8 +132,13 @@ body {
 }
 
 .txt-sub-error > a{
-    color: #C1EBFC;
+    color: #3E1403;
     text-decoration: none;
+}
+
+.txt-sub-error > a:hover{
+    transform: scale(1.1);
+    color:#C1EBFC;
 }
 
 /* styling review cards */
