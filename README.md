@@ -201,3 +201,60 @@ The tables below show the datat structures used for creating reviews and comment
 ## Testing
 
 No Automated testing was performed for the production of this site. Rigorous manual testing was performed through numerous user experiences.
+
+- <strong>Implementation</strong>:
+When designing the review list, movie review data is added to the database and can then be observed from the home page. To ensure that reviews loaded as expected and information was visible when the review was hovered over and review content was loading when clicked on, I manually tested this.
+
+- <strong>Test</strong>:
+To perform this test, I individually went through each test, loading the review content of each review, and attemted to change the urls to see whether each item loaded as expected.
+
+- <strong>Result</strong>:
+Each review loaded correctly with no information missing. When changing the urls to one that did not exist, a 404 error page was shown.
+
+- <strong>Verdict</strong>:
+The test passed and as the 404 error page is from the generic Django 404 error page, I design a custom 404 error page in the case that a user attempts to navigate from the page by changing the url.
+
+---
+
+- <strong>Implementation</strong>:
+Users should not be able to comment on reviews unless they are authenticated. 
+
+- <strong>Test</strong>:
+To test this, I checked individually that each review, when user is not authenticated, does not show the comment box. I also copied the url when logged in, then logged out and siply pasted the url in to see if it would enable the comments.
+
+- <strong>Result</strong>:
+The comments box was not available on any of the review if the user was not authenticated. Even if the user changed the URL, the comments box was not available without authentication.
+
+- <strong>Verdict</strong>:
+The test passed and no amendments were necessary. 
+
+---
+
+- <strong>Implementation</strong>:
+User are also unable to like/unlike reviews without authentication.
+
+- <strong>Test</strong>:
+To test this, I checked each review, attempting to like the review and then tried to change the url when logged in.
+
+- <strong>Result</strong>:
+When attempting to like the Review, I was unable to like the review without authentication.
+
+- <strong>Verdict</strong>:
+This test passed, and required no amendments.
+
+---
+
+- <strong>Implementation</strong>:
+The user is required to register with only a username and password, and email is an aptional field. 
+
+- <strong>Test</strong>:
+To test this I attempted to create an account with only an email, or only a space in the CharField of the username.
+
+- <strong>Result</strong>:
+As expected, registration from this basis is not enabled. Although upon testing this, I discovered that when I registered a user with an email and username, after creating the user, I was sent to a 500 error page.
+
+- <strong>Verdict</strong>:
+Upon fixing this I changed the setting of Allauth authentication to fix this bug and also produced a custom 500 error page.
+
+
+### Bugs
