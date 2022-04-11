@@ -275,3 +275,67 @@ No unresolved bugs to confirm to still be present in site.
 
 ## Deployment
 
+This site was deployed using Heroku [Critiqal](https://critiqal.herokuapp.com/)
+
+The following deployment instructions are to deploy a Django app to Heroku, assuming the necessary libraries have been installed, basic django application has been created, and PostgreSQL database is set up.
+
+From this point, the four main steps dor deployment are as follows:
+
+1. Create the Heroku App
+2. Attach the database
+3. Prepare our environment and settings.py file
+4. Get our static and media files stored on Cloudinary
+
+### Create the Heroku App
+
+- Once logged into your personal Heroku account, In the top left corner is located an icon "New". Click this button and you will be provided with two options.
+    - Click the option to create new app
+- You can then choose a name for your application and your region.
+- Then click Create app
+
+- Then navigate to the Resources tab, and in the add-ons search bar, search and add "Heroku postgres".
+    - click "Submit Order Form"
+- In the settings tab, click Reveal Config vars and copy the CATABASE_URL.
+- In your gitpod workspace for your new application create a new file called "env.py"
+    - Import os library
+    - Set up environment variables as the example demonstrates:
+    os.environ['DATABASE_URL'] = 'postgres://...'
+    os.environ['SECRET_KEY'] = 'Your Secret Key'
+- Then add your SECRET_KEY to Config vars back in Heroku app settings
+- In setting.py file for Django app
+    - Reference env.py file
+    - Remove insecure secret key and replace with links to SECRET_KEY from Heroku config vars
+    - Comment out old Database section
+    - Add new database section from DATABASE_URL as follows:
+    "
+    DATABASES = {
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+    "
+- Save all the files and make migrations
+
+### Setting up Cloudinary
+
+- Copy CLOUDINARY_URL environment variable from dashboard
+- Add ClOUDINARY_URL to env.py as shown:
+    os.environ['CLOUDINARY_URL'] = 'cloudinary://...'
+- Add CLOUDINARY_URL to Heroku config vars
+- Add DISABLE_COLLECTSTATIC to Heroku Config Vars and set to 1
+- Add Cloudinary Libraries to installed apps in settings
+- Tell Django to use Cloudinary to store media and static files in settings.py
+- Link file to the templates directory in Heroku
+- Change the templates directory to TEMPLATES_DIR
+- Add Heroku Hostname to ALLOWED_HOSTS as follows:
+    ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "localhost"]
+- On top level, creat the folders static, media and templates
+- Create a Procfile
+    - add "web: gunicorn PROJ_NAME.wsgi"
+- Add, Commit and Push to GitHub
+- And Deploy Content Manually through Heroku with "DEBUG = False" in settings.
+    - To deploy click the deploy icon back in Heroku
+    - Click "Connect to GitHub"
+    - Then find the repo name of the app you created with Django
+    - and manually deploy.
+
+
+        
