@@ -65,30 +65,84 @@ To compliment this I chose a few different tones of grey, which further allowed 
 
 ### Wireframes
 
-#### Home Page Desktop
+Some pages are not shown to be on different screen sizes. This is because the page is the same for smaller screen sizes but for narrower screens.
 
-![Image of wireframe for desktop view of home page](static/media/dthome.png)
+#### Desktop:
 
-#### Review Content Page Desktop
+The home page has been slightly adapted to include a main image since the wireframing was decided. But all other features remained the same.
 
-![Image of wireframe for desktop view of review content page](static/media/dtreview.png)
+- [Desktop view of Home page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/dthome.png)
+- [Desktop view of Review content page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/dtreview.png)
+- [Desktop view of Registration page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/dtregister.png)
+- [Desktop view of Login page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/dtlogin.png)
 
-#### Registration Form Desktop
+#### Tablet:
 
-![Image of wireframe for desktop view of Registration page](static/media/dtregister.png)
+- [Tablet view of Home page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/thome.png)
+- [Tablet view of Review content page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/treview.png)
 
-#### Login Form Desktop
+#### Home page Mobile:
 
-![Image of wireframe for desktop view of login page](static/media/dtlogin.png)
+- [Mobile view of Home page](https://github.com/reececilon/critiqal-p4/blob/main/static/media/mhome.png)
 
-#### Home Page Tablet 
+## Features
 
-![Image of wireframe for Tablet view of home page](static/media/thome.png)
+### Existing Features
 
-#### Review Content Page Tablet
+* Header
+    * The header starts at the beginning of the page which includes the site logo, **Critiqal**, which acts as a link to the Home page.
+    * Navigation is also present in the header, allowing the user to Register, Login/Logout, or return to the home page.
+    * The logo is displayed in the main colour of the site, light blue, against the grey background.
+    * And finally a quote about cinema.
 
-![Image of wireframe for tablet view of review content page](static/media/treview.png)
+![Image of the header](static/media/header.png)
 
-#### Home page Mobile
+* Main Image
+    * The main image section changes depending on whether the user is authenticated. If the user is not authenticated, The main section displays a registration button followed by the site logo.
+    * I the user is Authenticated, the mainsection describes the purpose of the site.
+    * The registration button changes colour when hovered over to indicate to the user that it is clickable.
 
-![Image of wireframe for mobile view of home page](static/media/mhome.png)
+![Image of main section](static/media/main.png)
+
+* Review List 
+    * The movie reviews are paginated to hold only 8 reviews per page.
+    * Each review is desplayed on a card which has an overlay providing only the most essential information about the movie review.
+    * When Hovered over, the overlay of the cards is displayed, showing: the movie name, the rating, the excerpt, the author, the created-on date, and the no. of likes.
+    * A clickable button is also displayed enabling the user to **Read** the review. And to further encourage this to the user, the button is designed to turn light-blue when hovered over.
+    * A **Next** button is also featured on the section to enable the user to view more reviews.
+
+![Image of the review list](static/media/list.png)
+
+* Footer
+    * The footer uses the same styling as the rest of the site. Containing the sicial links of the site, to enable the user to keep updated with the reviews through social media.
+    * The links show an icon for each social in a dark grey colour.
+    * When hovered over Each link will turn light blue.
+
+![Image of the footer](static/media/footer.png)
+
+* Review Content 
+    * This section displays the main information of the review. With text about the movie that wraps around the main image card.
+    * The image card shows the rating of the movie when hovered over, the auther, the created-on date, and a heart icon followed by the no. of likes.
+    * The heart icon signifies likes of the reviews.
+    * The heart icon is clickable, and will like or unlike of the uses clicks.
+    * The icon is only clickable in the review content section to encourage the user to read the content before deciding whether they like the movie.
+    * If a Youtube link for the movie is provided, the review will automatically show an iframe, enabling the user to watch the movie trailer directly from this site.
+    * If a link is not provided, the site will tell the user that no trailer is available.
+
+![Image of review content section](static/media/content.png)
+
+* Comments Section
+    * The comments section shows past comments on the left side of the screen with each comment in descending order, based on created date. Where older comments are displayed at the top. Allowing conversation to flow better.
+    * If the user is authenticated, a comment box will be displayed on the right, allowing the user to comment on the review.
+    * A button in a dark grey colour turns light-blue, following the colour theme of the site, when the user hovers over, to allow the user to post the comment for approval by the admin of the site.
+
+![Image of the comments section](static/media/comments.png)
+
+* Registration Form
+    * The registration form is displayed in the main colour theme of the site.
+    * The user is requred to choose a username and password to sign up.
+    * Email is an optionaly field.
+    * A link to the login page is also available to users already signed up.
+    * The login page is similar in aesthetic to the sign-up page.
+
+![Image of registration form](static/media/register.png)
