@@ -149,14 +149,6 @@ The home page has been slightly adapted to include a main image since the wirefr
 
 ## Data Storage
 
-### User Table
-
-| Title            | Key In Database | Form Validation | Data Type |
-|------------------|-----------------|-----------------|-----------|
-| Account id       | _id             | No Validation   | Primary Key  |
-| Username       | username      | max length 150 | CharField |
-| Email Address       | email       | must contain @ and .com etc | Email |
-
 ### Review Table
 
 | Title            | Key In Database | Form Validation | Data Type |
@@ -173,3 +165,13 @@ The home page has been slightly adapted to include a main image since the wirefr
 | rating       | rating | no form validation | IntegerField |
 | youtube-trailer-link | yt_link | no form validation | TextField |
 
+### Comments Table
+
+| Title            | Key In Database | Form Validation | Data Type |
+|------------------|-----------------|-----------------|-----------|
+| Post       |      post        |  no form validation  | ForeignKey  |
+| Name       |  name   | max length 80 | CharField |
+| email       |  email   | must contain @ and .com etc | EmailField |
+| Body      |  body | max length 300 | TextField |
+| Created_date      | created_date | datetime.date.today | DateField |
+| Approved      | apporved | no validation | BooleanField |
