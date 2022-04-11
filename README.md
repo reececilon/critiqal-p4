@@ -149,6 +149,8 @@ The home page has been slightly adapted to include a main image since the wirefr
 
 ## Data Storage
 
+The tables below show the datat structures used for creating reviews and commenting on the reviews. For comments the post, name, email and created_date are automatically updated based on the user logged in and the post that is being viewed.
+
 ### Review Table
 
 | Title            | Key In Database | Form Validation | Data Type |
@@ -175,3 +177,12 @@ The home page has been slightly adapted to include a main image since the wirefr
 | Body      |  body | max length 300 | TextField |
 | Created_date      | created_date | datetime.date.today | DateField |
 | Approved      | apporved | no validation | BooleanField |
+
+## Technology Used
+
+### Languages
+
+- HTML
+- CSS
+- JavaScript
+- [Python](https://www.python.org/)
