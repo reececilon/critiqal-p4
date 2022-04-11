@@ -347,3 +347,7 @@ All code was written by myself
 #### Media 
 
 - Natalia Radjuko provided my main image for site [Main image](static/media/logo-main-image.png).
+
+## Disclaimer
+
+All images & content used for this site are for educational purposes only.
