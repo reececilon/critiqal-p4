@@ -12,7 +12,7 @@ Critiqal is review site for the coolest movies of all time, whether they are old
 * Enable users to register to the review site.
 * Allow the users to like reviews.
 * Allow the user to engage in discussions in the comments section.
-* Enable users to read a review to gain information about a movie.
+* Enable users to read a reviews to gain information about a movie.
 * Allow users to watch a movie trailer to understand the plot.
 
 ### User Stories
@@ -44,4 +44,24 @@ Critiqal is review site for the coolest movies of all time, whether they are old
 * As a **developer** I want to **ensure that the user can't break the flow of the site** by **applying defensive design choices**.
 * As a **developer** I want to **enable the authenticated user to access all features of the site correctly**.
 * As a **developer** I want to **provide options for the admin to quickly modify site**.
+
+### Design Features
+
+#### Fonts:
+
+For the logo of Critical I wanted a font that was sharp, to emphasise the idea that created the name. 
+To be critical and to critique. Hence, I chose a font that was narrow to embody this idea. 
+The Font I chose for this is [League Gothic](https://fonts.google.com/specimen/League+Gothic?query=league+gothic) font.
+This font is the main font for this site.
+
+The second font I used was [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto), which is a very simple font that compliments the League Gothic font well.
+
+#### Colours:
+
+The main colour I used for this site is #C1EBFC, which is a light blue colour. I thought it was an very striking colour which allowed the logo to stand out. 
+To compliment this I chose a few different tones of grey, which further allowed the light blue to stand out whereit was applied.
+
+![Image of colour bar displaying colour options for Critical site.](static/media/colours.png)
+
+### Wireframes
 
