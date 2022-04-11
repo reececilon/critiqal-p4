@@ -319,6 +319,7 @@ From this point, the four main steps dor deployment are as follows:
 - Copy CLOUDINARY_URL environment variable from dashboard
 - Add ClOUDINARY_URL to env.py as shown:
     os.environ['CLOUDINARY_URL'] = 'cloudinary://...'
+- add env.py to ".gitignore"
 - Add CLOUDINARY_URL to Heroku config vars
 - Add DISABLE_COLLECTSTATIC to Heroku Config Vars and set to 1
 - Add Cloudinary Libraries to installed apps in settings
