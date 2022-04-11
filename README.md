@@ -146,3 +146,30 @@ The home page has been slightly adapted to include a main image since the wirefr
     * The login page is similar in aesthetic to the sign-up page.
 
 ![Image of registration form](static/media/register.png)
+
+## Data Storage
+
+### User Table
+
+| Title            | Key In Database | Form Validation | Data Type |
+|------------------|-----------------|-----------------|-----------|
+| Account id       | _id             | No Validation   | Primary Key  |
+| Username       | username      | max length 150 | CharField |
+| Email Address       | email       | must contain @ and .com etc | Email |
+
+### Review Table
+
+| Title            | Key In Database | Form Validation | Data Type |
+|------------------|-----------------|-----------------|-----------|
+| Author       |      author        |  no validation  | ForeignKey  |
+| Title       |   title   | max length 200 | CharField |
+| image       |  featured_image   | no form validation | CloudinaryImage |
+| content      |  content | no max length | TextField |
+| created      | created_date | datetime.date.today | DateField |
+| updated      | updated_date | datetime.date.today | DateField |
+| likes        | likes | no form validation | ManyToManyField |
+| status       | status | no form validation | IntegerField |
+| slug(unique) | slug | no form validation | SlugField |
+| rating       | rating | no form validation | IntegerField |
+| youtube-trailer-link | yt_link | no form validation | TextField |
+
