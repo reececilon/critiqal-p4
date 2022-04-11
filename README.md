@@ -185,4 +185,19 @@ The tables below show the datat structures used for creating reviews and comment
 - HTML
 - CSS
 - JavaScript
-- [Python](https://www.python.org/)
+- Python
+
+### Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+### Tools
+
+- [Heroku](https://www.heroku.com)
+- [Git](https://git-scm.com/)
+- [Postgres](https://www.postgresql.org/)
+
+## Testing
+
+No Automated testing was performed for the production of this site. Rigorous manual testing was performed through numerous user experiences.
