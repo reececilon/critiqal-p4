@@ -65,3 +65,4 @@ To compliment this I chose a few different tones of grey, which further allowed 
 
 ### Wireframes
 
+#### Home page
