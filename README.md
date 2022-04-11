@@ -273,7 +273,7 @@ Upon fixing this I changed the setting of Allauth authentication to fix this bug
 
 No unresolved bugs to confirm to still be present in site.
 
-## Deployment
+## Deployment Procedure
 
 This site was deployed using Heroku [Critiqal](https://critiqal.herokuapp.com/)
 
@@ -339,4 +339,11 @@ From this point, the four main steps dor deployment are as follows:
     - and manually deploy.
 
 
-        
+## Credits
+All code was written by myself
+
+### Acknowledgements
+
+#### Media 
+
+- Natalia Radjuko provided my main image for site [Main image](static/media/logo-main-image.png).
