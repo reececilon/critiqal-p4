@@ -258,3 +258,20 @@ Upon fixing this I changed the setting of Allauth authentication to fix this bug
 
 
 ### Bugs
+
+---
+* <strong>Problem</strong>: Some card info was pushed outside of the cards.
+* <strong>Cause</strong>: This was due to the movie title and excerpt being too long.
+* <strong>Resolution</strong>: To tackle this, I made the CharField length of the excerpt smaller and also reduced font size.
+
+---
+* <strong>Problem</strong>: When user provides email in registration, user is sent to 500 error page.
+* <strong>Cause</strong>: Allauth verified the users email after. Because of this, if user provided an incorrect email, user was sent to 500 error page.
+* <strong>Resolution</strong>: Changed allauth settings to not verify users email, and provided a custom error page.
+ 
+### Unresolved Bugs
+
+No unresolved bugs to confirm to still be present in site.
+
+## Deployment
+
