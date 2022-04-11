@@ -65,4 +65,30 @@ To compliment this I chose a few different tones of grey, which further allowed 
 
 ### Wireframes
 
-#### Home page
+#### Home Page Desktop
+
+![Image of wireframe for desktop view of home page](static/media/dthome.png)
+
+#### Review Content Page Desktop
+
+![Image of wireframe for desktop view of review content page](static/media/dtreview.png)
+
+#### Registration Form Desktop
+
+![Image of wireframe for desktop view of Registration page](static/media/dtregister.png)
+
+#### Login Form Desktop
+
+![Image of wireframe for desktop view of login page](static/media/dtlogin.png)
+
+#### Home Page Tablet 
+
+![Image of wireframe for Tablet view of home page](static/media/thome.png)
+
+#### Review Content Page Tablet
+
+![Image of wireframe for tablet view of review content page](static/media/treview.png)
+
+#### Home page Mobile
+
+![Image of wireframe for mobile view of home page](static/media/mhome.png)
